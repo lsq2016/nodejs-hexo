@@ -1,488 +1,202 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:description">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
-<meta name="twitter:description">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  <link rel="stylesheet" href="/css/style.css">
-  
 
+ <!DOCTYPE HTML>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+    <title>Hexo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=3, minimum-scale=1">
+    
+    <meta name="author" content="John Doe">
+    
+    
+    
+    
+    
+    <link rel="icon" href="/img/favicon.ico">
+    
+    
+    <link rel="apple-touch-icon" href="/img/pacman.jpg">
+    <link rel="apple-touch-icon-precomposed" href="/img/pacman.jpg">
+    
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+  <body>
+    <header>
+      <div>
+		
+			<div id="imglogo">
+				<a href="/"><img src="/img/logo.svg" alt="Hexo" title="Hexo"/></a>
+			</div>
+			
+			<div id="textlogo">
+				<h1 class="site-name"><a href="/" title="Hexo">Hexo</a></h1>
+				<h2 class="blog-motto"></h2>
+			</div>
+			<div class="navbar"><a class="navbutton navmobile" href="#" title="Menu">
+			</a></div>
+			<nav class="animated">
+				<ul>
+					
+						<li><a href="/">Home</a></li>
+					
+						<li><a href="/archives">Archives</a></li>
+					
+					<li>
+					
+					<form class="search" action="//google.com/search" method="get" accept-charset="utf-8">
+						<label>Search</label>
+						<input type="text" id="search" name="q" autocomplete="off" maxlength="20" placeholder="Search" />
+						<input type="hidden" name="q" value="site:yoursite.com">
+					</form>
+					
+					</li>
+				</ul>
+			</nav>			
+</div>
+
+    </header>
+    <div id="container">
+      <div id="main">
+
+  <section class="post" itemscope itemprop="blogPost">
+  
+    <a href="/2016/03/23/vim配置markdown语法高亮/" title="" itemprop="url">
+  
+    <h1 itemprop="name"></h1>
+    
+     
+           <p itemprop="description" >##vim有一个插件提供语法高亮支持,方便实用,安装如下:github地址:    https://github.com/plasticboy/vim-markdown
+解压之后有两个文件夹,syntax和ftdetect,里面都含有markdown.vim,尽管名字相同，两个文</p>
         
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-vim配置markdown语法高亮" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/03/23/vim配置markdown语法高亮/" class="article-date">
-  <time datetime="2016-03-23T07:03:54.188Z" itemprop="datePublished">2016-03-23</time>
-</a>
     
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>##vim有一个插件提供<code>语法高亮</code>支持,方便实用,安装如下:<br>github地址:<br>    <a href="https://github.com/plasticboy/vim-markdown" target="_blank" rel="external">https://github.com/plasticboy/vim-markdown</a></p>
-<p>解压之后有两个文件夹,syntax和ftdetect,里面都含有markdown.vim,尽管名字相同，两个<br>文件夹中的文件是不同的。syntax中的 mkd.vim 是关键的语法解析文件，里面是关于语法高亮的详细定义。<br>ftdetect中的 mkd.vim 定义的是自动解析哪些文件。将两个文件拷贝到~/.vim下对用的syntax和ftdetect,<br>没有的话,则自己新建.执行以下命令:</p>
-<blockquote>
-<ul>
-<li>cp ./syntax/markdown.vim  ~/.vim/syntax/</li>
-<li>cp ./ftdetect/markdown.vim  ~/.vim/ftdetect/</li>
-</ul>
-</blockquote>
-<p>复制到对应目录后，然后重启你的vim就可以了。</p>
-<blockquote>
-<p>下面是github最新版本中的定义方式，支持的后缀名包括花括号中的内容，如果有新的定义，可以自己加</p>
-<ol>
-<li><blockquote>
-<p>cat &gt;&gt; ~/.vimrc &lt;&lt; eof</p>
-</blockquote>
-</li>
-<li><p>&gt;<br>au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn} set filetype=mkd</p>
-</li>
-<li><blockquote>
-<p>let g:vim_markdown_folding_disabled=1</p>
-</blockquote>
-</li>
-<li><blockquote>
-<p>eof</p>
-</blockquote>
-</li>
-</ol>
-</blockquote>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/23/vim配置markdown语法高亮/" data-id="cim4i8yf000016eqvaa8vaqgu" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-centos优化" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/03/23/centos优化/" class="article-date">
-  <time datetime="2016-03-23T07:03:44.087Z" itemprop="datePublished">2016-03-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <pre><code>CentOS系统安装之后并不能立即投入生产环境使用，往往需要先经过我们运维人员的优化才行。在此讲解几点关于Linux系统安装后的基础优化操作。注意：本次优化都是基于CentOS（5.8/6.4）。
-下面我就为大家简单讲解几点关于Linux系统安装后的基础优化操作。
-注意：本次优化都是基于CentOS（5.8/6.4）。关于5.8和6.4两者优化时的小区别，我会在文中提及的。
-</code></pre><h2 id="优化条目："><a href="#优化条目：" class="headerlink" title="优化条目："></a>优化条目：</h2><pre><code>1. 修改ip地址、网关、主机名、DNS等
-2. 关闭selinux，清空iptables
-3. 添加普通用户并进行sudo授权管理
-4. 更新yum源及必要软件安装
-5. 定时自动更新服务器时间
-6. 精简开机自启动服务
-7. 定时自动清理/var/spool/clientmqueue/目录垃圾文件，放置inode节点被占满
-8. 变更默认的ssh服务端口，禁止root用户远程连接
-9. 锁定关键文件系统
-10. 调整文件描述符大小
-11. 调整字符集，使其支持中文
-12. 去除系统及内核版本登录前的屏幕显示
-13. 内核参数优化
-</code></pre><h3 id="1、修改ip地址、网关、主机名、DNS等"><a href="#1、修改ip地址、网关、主机名、DNS等" class="headerlink" title="1、修改ip地址、网关、主机名、DNS等"></a>1、修改ip地址、网关、主机名、DNS等</h3><pre><code>[root@localhost ~]# vi /etc/sysconfig/network-scripts/ifcfg-eth0
-DEVICE=eth0         #网卡名字
-BOOTPROTO=static    #静态IP地址获取状态 如：DHCP表示自动获取IP地址
-IPADDR=192.168.1.113            #IP地址
-NETMASK=255.255.255.0           #子网掩码
-ONBOOT=yes                #引导时是否激活
-GATEWAY=192.168.1.1
-
-[root@localhost ~]# vi /etc/sysconfig/network
-HOSTNAME=c64     #修改主机名，重启生效
-GATEWAY=192.168.1.1    #修改默认网关,如果上面eth0里面不配置网关的话，默认就使用这里的网关了。
-
-[root@localhost ~]# vi /etc/resolv.conf   #修改DNS信息
-nameserver 114.114.114.114
-nameserver 8.8.8.8
-
-[root@localhost ~]# service network restart   #重启网卡，生效
-重启网卡，也可以用 /etc/init.d/network restart 命令。
-</code></pre><h3 id="2、关闭selinux，清空iptables"><a href="#2、关闭selinux，清空iptables" class="headerlink" title="2、关闭selinux，清空iptables"></a>2、关闭selinux，清空iptables</h3><h4 id="关闭selinux"><a href="#关闭selinux" class="headerlink" title="关闭selinux"></a>关闭selinux</h4><pre><code>[root@c64 ~]# sed –i ‘s/SELINUX=enforcing/SELINUX=disabled/g’ /etc/selinux/config   #修改配置文件则永久生效，但是必须要重启系统。
-[root@c64 ~]# grep SELINUX=disabled /etc/selinux/config
-SELINUX=disabled     #查看更改后的结果
-[root@c64 ~]# setenforce 0#临时生效命令
-[root@c64 ~]# getenforce      #查看selinux当前状态
-Permissive
-</code></pre><h4 id="清空iptables"><a href="#清空iptables" class="headerlink" title="清空iptables"></a>清空iptables</h4><pre><code>[root@c64 ~]# iptables –F     #清理防火墙规则
-[root@c64 ~]# iptables –L     #查看防火墙规则
-Chain INPUT (policy ACCEPT)
-target     prot opt source               destination
-Chain FORWARD (policy ACCEPT)
-target     prot opt source               destination
-Chain OUTPUT (policy ACCEPT)
-target     prot opt source               destination
-[root@c64 ~]#/etc/init.d/iptables save #保存防火墙配置信息
-</code></pre><h3 id="3、添加普通用户并进行sudo授权管理"><a href="#3、添加普通用户并进行sudo授权管理" class="headerlink" title="3、添加普通用户并进行sudo授权管理"></a>3、添加普通用户并进行sudo授权管理</h3><pre><code>[root@c64 ~]# useradd sunsky
-[root@c64 ~]# echo &quot;123456&quot;|passwd --stdin sunsky&amp;&amp;history –c
-[root@c64 ~]# visudo
-在root    ALL=(ALL)    ALL此行下，添加如下内容
-sunsky    ALL=(ALL)    ALL
-</code></pre><h3 id="4、更新yum源及必要软件安装"><a href="#4、更新yum源及必要软件安装" class="headerlink" title="4、更新yum源及必要软件安装"></a>4、更新yum源及必要软件安装</h3><p>yum安装软件，默认获取rpm包的途径从国外官方源，改成国内的源。<br>国内较快的两个站点：搜狐镜像站点、网易镜像站点</p>
-<blockquote>
-<p>法1. ：自己配置好安装源配置文件，然后上传到linux.</p>
-<p>法2. ：使用镜像站点配置好的yum安装源配置文件</p>
-</blockquote>
-<pre><code>[root@c64 ~]# cd /etc/yum.repos.d/
-[root@c64 yum.repos.d]# /bin/mv CentOS-Base.repo CentOS-Base.repo.bak
-[root@c64 yum.repos.d]# wget http://mirrors.163.com/.help/CentOS6-Base-163.repo
-</code></pre><blockquote>
-<p>接下来执行如下命令，检测yum是否正常</p>
-</blockquote>
-<pre><code>[root@c64 yum.repos.d]# yum clean all  #清空yum缓存
-[root@c64 yum.repos.d]# yum makecache  #建立yum缓存
-</code></pre><blockquote>
-<p>然后使用如下命令将系统更新到最新</p>
-</blockquote>
-<pre><code>[root@c64 yum.repos.d]# rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY*       #导入签名KEY到RPM
-[root@c64 yum.repos.d]# yum  upgrade-y     #更新系统内核到最新
-</code></pre><blockquote>
-<p>接下来就要安装几个必要的软件了</p>
-</blockquote>
-<pre><code>[root@c64 yum.repos.d]# yum install lrzsz ntpdate sysstat -y
-</code></pre><blockquote>
-<p>lrzsz是一个上传下载的软件</p>
-<p>sysstat是用来检测系统性能及效率的工具</p>
-</blockquote>
-<h3 id="5、定时自动更新服务器时间"><a href="#5、定时自动更新服务器时间" class="headerlink" title="5、定时自动更新服务器时间"></a>5、定时自动更新服务器时间</h3><pre><code>[root@c64 ~]# echo &apos;*/5 * * * * /usr/sbin/ntpdate time.windows.com &gt;/dev/null 2 &gt;&amp;1&apos; &gt;&gt;/var/spool/cron/root
-[root@c64 ~]# echo &apos;*/10 * * * * /usr/sbin/ntpdate time.nist.gov &gt;/dev/null 2&gt;&amp;1&apos; &gt;&gt;/var/spool/cron/root
-</code></pre><blockquote>
-<p>提示：CentOS 6.4的时间同步命令路径不一样<br>6是/usr/sbin/ntpdate<br>5是/sbin/ntpdate<br>扩展：在机器数量少时，以上定时任务同步时间就可以了。如果机器数量大时，可以在网内另外部署一台时间同步服务器NTP Server。此处仅提及，不做部署。<br>时间同步服务器架构图：</p>
-</blockquote>
-<h3 id="6、精简开机自启动服务"><a href="#6、精简开机自启动服务" class="headerlink" title="6、精简开机自启动服务"></a>6、精简开机自启动服务</h3><blockquote>
-<p>刚装完操作系统可以只保留crond，network，syslog，sshd这四个服务。（Centos6.4为rsyslog）</p>
-</blockquote>
-<pre><code>[root@c64 ~]# for sun in `chkconfig --list|grep 3:on|awk &apos;{print $1}&apos;`;do chkconfig --level 3 $sun off;done
-[root@c64 ~]# for sun in crond rsyslog sshd network;do chkconfig --level 3 $sun on;done
-[root@c64 ~]# chkconfig --list|grep 3:on
-crond           0:off   1:off   2:on    3:on    4:on    5:on    6:off
-network         0:off   1:off   2:on    3:on    4:on    5:on    6:off
-rsyslog         0:off   1:off   2:on    3:on    4:on    5:on    6:off
-sshd            0:off   1:off   2:on    3:on    4:on    5:on    6:off
-</code></pre><h3 id="7、定时自动清理-var-spool-clientmqueue-目录垃圾文件，放置inode节点被占满"><a href="#7、定时自动清理-var-spool-clientmqueue-目录垃圾文件，放置inode节点被占满" class="headerlink" title="7、定时自动清理/var/spool/clientmqueue/目录垃圾文件，放置inode节点被占满"></a>7、定时自动清理/var/spool/clientmqueue/目录垃圾文件，放置inode节点被占满</h3><blockquote>
-<p>本优化点，在6.4上可以忽略不需要操作即可！</p>
-</blockquote>
-<pre><code>[root@c64 ~]# mkdir /server/scripts -p
-[root@c64 ~]# vi /server/scripts/spool_clean.sh
-</code></pre><p>输入如下内容:</p>
-<pre><code>!/bin/sh
-find/var/spool/clientmqueue/ -type f -mtime +30|xargs rm -f
-</code></pre><p>然后将其加入到crontab定时任务中</p>
-<pre><code>[root@c64 ~]# echo &apos;*/30 * * * * /bin/sh /server/scripts/spool_clean.sh &gt;/dev/null 2&gt;&amp;1&apos;&gt;&gt;/var/spool/cron/root
-</code></pre><p>变更默认的ssh服务端口，禁止root用户远程连接</p>
-<pre><code>[root@c64 ~]# cp /etc/ssh/sshd_config /etc/ssh/sshd_config.bak
-[root@c64 ~]# vim /etc/ssh/sshd_config
-Port 52113#ssh连接默认的端口
-PermitRootLogin no   #root用户黑客都知道，禁止它远程登录
-PermitEmptyPasswords no #禁止空密码登录
-UseDNS no            #不使用DNS
-[root@c64 ~]# /etc/init.d/sshd reload    #从新加载配置
-[root@c64 ~]# netstat -lnt     #查看端口信息
-[root@c64 ~]# lsof -i tcp:52113
-</code></pre><h3 id="9、锁定关键文件系统"><a href="#9、锁定关键文件系统" class="headerlink" title="9、锁定关键文件系统"></a>9、锁定关键文件系统</h3><pre><code>[root@c64 ~]# chattr +i /etc/passwd
-[root@c64 ~]# chattr +i /etc/inittab
-[root@c64 ~]# chattr +i /etc/group
-[root@c64 ~]# chattr +i /etc/shadow
-[root@c64 ~]# chattr +i /etc/gshadow
-</code></pre><blockquote>
-<p>使用chattr命令后，为了安全我们需要将其改名</p>
-</blockquote>
-<pre><code>[root@c64 ~]# /bin/mv /usr/bin/chattr /usr/bin/任意名称
-</code></pre><h3 id="10、调整文件描述符大小"><a href="#10、调整文件描述符大小" class="headerlink" title="10、调整文件描述符大小"></a>10、调整文件描述符大小</h3><pre><code>[root@localhost ~]# ulimit –n        #查看文件描述符大小
-1024
-[root@localhost ~]# echo &apos;*  -  nofile  65535&apos; &gt;&gt; /etc/security/limits.conf
-</code></pre><blockquote>
-<p>配置完成后，重新登录即可查看。</p>
-</blockquote>
-<p>提示：也可以把ulimit -SHn 65535命令加入到/etc/rc.local，然后每次重启生效</p>
-<pre><code>[root@c64 ~]# cat &gt;&gt;/etc/rc.local&lt;&lt;EOF
-#open files
-ulimit -HSn 65535
-#stack size
-ulimit -s 65535
-EOF
-
-扩展：文件描述符
-文件描述符在形式上是一个非负整数。实际上，它是一个索引值，指向内核为每一个进程所维护的该进程打开文件的记录表。当程序打开一个现有文件或者创建一个新文件时，内核向进程返回一个文件描述符。在程序设计中，一些涉及底层的程序编写往往会围绕着文件描述符展开。但是文件描述符这一概念往往只适用于Unix、Linux这样的操作系统。
-习惯上，标准输入（standard input）的文件描述符是 0，标准输出（standard output）是 1，标准错误（standard error）是 2。尽管这种习惯并非Unix内核的特性，但是因为一些 shell 和很多应用程序都使用这种习惯，因此，如果内核不遵循这种习惯的话，很多应用程序将不能使用。
-</code></pre><h3 id="11、调整字符集，使其支持中文"><a href="#11、调整字符集，使其支持中文" class="headerlink" title="11、调整字符集，使其支持中文"></a>11、调整字符集，使其支持中文</h3><pre><code>sed -i &apos;s#LANG=&quot;en_US.UTF-8&quot;#LANG=&quot;zh_CN.GB18030&quot;#&apos;/etc/sysconfig/i18n
-
-source  /etc/sysconfig/i18n
-</code></pre><blockquote>
-<p>扩展：什么是字符集？<br>简单的说就是一套文字符号及其编码。常用的字符集有：<br>GBK 定长双字节不是国际标准，支持系统不少<br>UTF-8 非定长 1-4字节广泛支持，MYSQL也使用UTF-8<br>12、去除系统及内核版本登录前的屏幕显示</p>
-</blockquote>
-<pre><code>[root@c64 ~]# /etc/redhat-release
-[root@c64 ~]# vi /etc/issue
-</code></pre><h3 id="13、内核参数优化"><a href="#13、内核参数优化" class="headerlink" title="13、内核参数优化"></a>13、内核参数优化</h3><blockquote>
-<p>说明：本优化适合apache，nginx，squid多种等web应用，特殊的业务也可能需要略作调整。</p>
-</blockquote>
-<pre><code>[root@c64 ~]# vi /etc/sysctl.conf
-#by sun in 20131001
-net.ipv4.tcp_fin_timeout = 2
-net.ipv4.tcp_tw_reuse = 1
-net.ipv4.tcp_tw_recycle = 1
-net.ipv4.tcp_syncookies = 1
-net.ipv4.tcp_keepalive_time =600
-net.ipv4.ip_local_port_range = 4000    65000
-net.ipv4.tcp_max_syn_backlog = 16384
-net.ipv4.tcp_max_tw_buckets = 36000
-net.ipv4.route.gc_timeout = 100
-net.ipv4.tcp_syn_retries = 1
-net.ipv4.tcp_synack_retries = 1
-net.core.somaxconn = 16384
-net.core.netdev_max_backlog = 16384
-net.ipv4.tcp_max_orphans = 16384
-#一下参数是对iptables防火墙的优化，防火墙不开会有提示，可以忽略不理。
-net.ipv4.ip_conntrack_max = 25000000
-net.ipv4.netfilter.ip_conntrack_max = 25000000
-net.ipv4.netfilter.ip_conntrack_tcp_timeout_established = 180
-net.ipv4.netfilter.ip_conntrack_tcp_timeout_time_wait = 120
-net.ipv4.netfilter.ip_conntrack_tcp_timeout_close_wait = 60
-net.ipv4.netfilter.ip_conntrack_tcp_timeout_fin_wait = 120
-[root@localhost ~]# sysctl –p    #使配置文件生效
-提示：由于CentOS6.X系统中的模块名不是ip_conntrack，而是nf_conntrack，所以在/etc/sysctl.conf优化时，需要把net.ipv4.netfilter.ip_conntrack_max 这种老的参数，改成net.netfilter.nf_conntrack_max这样才可以。
-即对防火墙的优化，在5.8上是
-net.ipv4.ip_conntrack_max = 25000000
-net.ipv4.netfilter.ip_conntrack_max = 25000000
-    net.ipv4.netfilter.ip_conntrack_tcp_timeout_established = 180
-net.ipv4.netfilter.ip_conntrack_tcp_timeout_time_wait = 120
-net.ipv4.netfilter.ip_conntrack_tcp_timeout_close_wait = 60
-net.ipv4.netfilter.ip_conntrack_tcp_timeout_fin_wait = 120
-在6.4上是
-net.nf_conntrack_max = 25000000
-net.netfilter.nf_conntrack_max = 25000000
-net.netfilter.nf_conntrack_tcp_timeout_established = 180
-net.netfilter.nf_conntrack_tcp_timeout_time_wait = 120
-net.netfilter.nf_conntrack_tcp_timeout_close_wait = 60
-net.netfilter.nf_conntrack_tcp_timeout_fin_wait = 120
-</code></pre><blockquote>
-<p>另外，在此优化过程中可能会有报错：</p>
-<p>1、5.8版本上<br>error: “net.ipv4.ip_conntrack_max”is an unknown key<br>error: “net.ipv4.netfilter.ip_conntrack_max”is an unknown key<br>error: “net.ipv4.netfilter.ip_conntrack_tcp_timeout_established”is an unknown key<br>error: “net.ipv4.netfilter.ip_conntrack_tcp_timeout_time_wait”is an unknown key<br>error: “net.ipv4.netfilter.ip_conntrack_tcp_timeout_close_wait”is an unknown key<br>error: “net.ipv4.netfilter.ip_conntrack_tcp_timeout_fin_wait”is an unknown key</p>
-<p>这个错误可能是你的防火墙没有开启或者自动处理可载入的模块ip_conntrack没有自动载入，解决办法有二，一是开启防火墙，二是自动处理开载入的模块ip_conntrack</p>
-</blockquote>
-<pre><code>modprobe ip_conntrack
-
-echo &quot;modprobe ip_conntrack&quot;&gt;&gt; /etc/rc.local
-</code></pre><p>2、6.4版本上</p>
-<blockquote>
-<p>error: “net.nf_conntrack_max”isan unknown key<br>error: “net.netfilter.nf_conntrack_max”isan unknown key<br>error: “net.netfilter.nf_conntrack_tcp_timeout_established”isan unknown key<br>error: “net.netfilter.nf_conntrack_tcp_timeout_time_wait”isan unknown key<br>error: “net.netfilter.nf_conntrack_tcp_timeout_close_wait”isan unknown key<br>error: “net.netfilter.nf_conntrack_tcp_timeout_fin_wait”isan unknown key</p>
-</blockquote>
-<pre><code>这个错误可能是你的防火墙没有开启或者自动处理可载入的模块ip_conntrack没有自动载入.
-解决办法有二:
-一是开启防火墙， 二是自动处理开载入的模块ip_conntrack
-</code></pre><blockquote>
-<p>modprobe nf_conntrack</p>
-<p>echo “modprobe nf_conntrack”&gt;/etc/rc.local</p>
-</blockquote>
-<p>3、6.4版本上</p>
-<blockquote>
-<p>error: “net.bridge.bridge-nf-call-ip6tables”isan unknown key<br>error: “net.bridge.bridge-nf-call-iptables”isan unknown key<br>error: “net.bridge.bridge-nf-call-arptables”isan unknown key</p>
-<p>这个错误是由于自动处理可载入的模块bridge没有自动载入，解决办法是自动处理开载入的模块ip_conntrack</p>
-</blockquote>
-<pre><code>modprobe bridge  
-echo &quot;modprobe bridge&quot;&gt;&gt; /etc/rc.local 
-</code></pre>
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/23/centos优化/" data-id="cim4i8yeq00006eqvr4tjkeii" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/03/19/hello-world/" class="article-date">
-  <time datetime="2016-03-19T13:47:17.409Z" itemprop="datePublished">2016-03-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/19/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/19/hello-world/" data-id="cim4i8yf700026eqvuskie2ar" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-
+    <time datetime="2016-03-23T07:03:54.188Z" itemprop="datePublished">2016-03-23</time>
+  </a>
 </section>
-        
-          <aside id="sidebar">
+
+  <section class="post" itemscope itemprop="blogPost">
   
+    <a href="/2016/03/23/centos优化/" title="" itemprop="url">
+  
+    <h1 itemprop="name"></h1>
     
+     
+           <p itemprop="description" >CentOS系统安装之后并不能立即投入生产环境使用，往往需要先经过我们运维人员的优化才行。在此讲解几点关于Linux系统安装后的基础优化操作。注意：本次优化都是基于CentOS（5.8/6.4）。
+下面我就为大家简单讲解几点关于Linux系统安装后的基础优化操作。
+注意：本次优化</p>
+        
+    
+    <time datetime="2016-03-23T07:03:44.087Z" itemprop="datePublished">2016-03-23</time>
+  </a>
+</section>
+
+  <section class="post" itemscope itemprop="blogPost">
+  
+    <a href="/2016/03/19/hello-world/" title="Hello World" itemprop="url">
+  
+    <h1 itemprop="name">Hello World</h1>
+    
+     
+           <p itemprop="description" >Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the </p>
+        
+    
+    <time datetime="2016-03-19T13:47:17.409Z" itemprop="datePublished">2016-03-19</time>
+  </a>
+</section>
+
+
+</div>
+      <div class="openaside"><a class="navbutton" href="#" title="Show Sidebar"></a></div>
+
+<div id="asidepart">
+<div class="closeaside"><a class="closebutton" href="#" title="Hide Sidebar"></a></div>
+<aside class="clearfix">
 
   
-    
 
   
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/03/">March 2016</a></li></ul>
-    </div>
-  </div>
 
+  <div class="rsspart">
+	<a href="null" target="_blank" title="rss">RSS</a>
+</div>
 
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2016/03/23/vim配置markdown语法高亮/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2016/03/23/centos优化/">(no title)</a>
-          </li>
-        
-          <li>
-            <a href="/2016/03/19/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
 </aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2016 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+</div>
     </div>
-  </div>
+    <footer><div id="footer" >
+	
+	<div class="line">
+		<span></span>
+		<div class="author"></div>
+	</div>
+	
+	
+	<div class="social-font clearfix">
+		
+		
+		
+		
+		
+	</div>
+		<p class="copyright">Powered by <a href="http://hexo.io" target="_blank" title="hexo">hexo</a> and Theme by <a href="https://github.com/A-limon/pacman" target="_blank" title="Pacman">Pacman</a> © 2016 
+		
+		<a href="http://yoursite.com" target="_blank" title="John Doe">John Doe</a>
+		
+		</p>
+</div>
 </footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
+    <script src="/js/jquery-2.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){ 
+  $('.navbar').click(function(){
+    $('header nav').toggleClass('shownav');
+  });
+  var myWidth = 0;
+  function getSize(){
+    if( typeof( window.innerWidth ) == 'number' ) {
+      myWidth = window.innerWidth;
+    } else if( document.documentElement && document.documentElement.clientWidth) {
+      myWidth = document.documentElement.clientWidth;
+    };
+  };
+  var m = $('#main'),
+      a = $('#asidepart'),
+      c = $('.closeaside'),
+      o = $('.openaside');
+  $(window).resize(function(){
+    getSize(); 
+    if (myWidth >= 1024) {
+      $('header nav').removeClass('shownav');
+    }else
+    {
+      m.removeClass('moveMain');
+      a.css('display', 'block').removeClass('fadeOut');
+      o.css('display', 'none');
+        
+    }
+  });
+  c.click(function(){
+    a.addClass('fadeOut').css('display', 'none');
+    o.css('display', 'block').addClass('fadeIn');
+    m.addClass('moveMain');
+  });
+  o.click(function(){
+    o.css('display', 'none').removeClass('beforeFadeIn');
+    a.css('display', 'block').removeClass('fadeOut').addClass('fadeIn');      
+    m.removeClass('moveMain');
+  });
+  $(window).scroll(function(){
+    o.css("top",Math.max(80,260-$(this).scrollTop()));
+  });
+});
+</script>
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script src="/js/script.js"></script>
 
-  </div>
-</body>
-</html>
+
+  </body>
+ </html>
