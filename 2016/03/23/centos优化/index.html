@@ -5,15 +5,25 @@
   
   <title>Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
+  <meta name="description" content="CentOS系统安装之后并不能立即投入生产环境使用，往往需要先经过我们运维人员的优化才行。在此讲解几点关于Linux系统安装后的基础优化操作。注意：本次优化都是基于CentOS（5.8/6.4）。
+下面我就为大家简单讲解几点关于Linux系统安装后的基础优化操作。
+注意：本次优化都是基于CentOS（5.8/6.4）。关于5.8和6.4两者优化时的小区别，我会在文中提及的。
+优化条目：1. 修改i">
+<meta property="og:type" content="article">
 <meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:url" content="http://yoursite.com/2016/03/23/centos优化/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description">
+<meta property="og:description" content="CentOS系统安装之后并不能立即投入生产环境使用，往往需要先经过我们运维人员的优化才行。在此讲解几点关于Linux系统安装后的基础优化操作。注意：本次优化都是基于CentOS（5.8/6.4）。
+下面我就为大家简单讲解几点关于Linux系统安装后的基础优化操作。
+注意：本次优化都是基于CentOS（5.8/6.4）。关于5.8和6.4两者优化时的小区别，我会在文中提及的。
+优化条目：1. 修改i">
+<meta property="og:updated_time" content="2016-03-16T09:48:29.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
-<meta name="twitter:description">
+<meta name="twitter:description" content="CentOS系统安装之后并不能立即投入生产环境使用，往往需要先经过我们运维人员的优化才行。在此讲解几点关于Linux系统安装后的基础优化操作。注意：本次优化都是基于CentOS（5.8/6.4）。
+下面我就为大家简单讲解几点关于Linux系统安装后的基础优化操作。
+注意：本次优化都是基于CentOS（5.8/6.4）。关于5.8和6.4两者优化时的小区别，我会在文中提及的。
+优化条目：1. 修改i">
   
     <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -62,63 +72,7 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main">
-  
-    <article id="post-vim配置markdown语法高亮" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/03/23/vim配置markdown语法高亮/" class="article-date">
-  <time datetime="2016-03-23T07:03:54.188Z" itemprop="datePublished">2016-03-23</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>##vim有一个插件提供<code>语法高亮</code>支持,方便实用,安装如下:<br>github地址:<br>    <a href="https://github.com/plasticboy/vim-markdown" target="_blank" rel="external">https://github.com/plasticboy/vim-markdown</a></p>
-<p>解压之后有两个文件夹,syntax和ftdetect,里面都含有markdown.vim,尽管名字相同，两个<br>文件夹中的文件是不同的。syntax中的 mkd.vim 是关键的语法解析文件，里面是关于语法高亮的详细定义。<br>ftdetect中的 mkd.vim 定义的是自动解析哪些文件。将两个文件拷贝到~/.vim下对用的syntax和ftdetect,<br>没有的话,则自己新建.执行以下命令:</p>
-<blockquote>
-<ul>
-<li>cp ./syntax/markdown.vim  ~/.vim/syntax/</li>
-<li>cp ./ftdetect/markdown.vim  ~/.vim/ftdetect/</li>
-</ul>
-</blockquote>
-<p>复制到对应目录后，然后重启你的vim就可以了。</p>
-<blockquote>
-<p>下面是github最新版本中的定义方式，支持的后缀名包括花括号中的内容，如果有新的定义，可以自己加</p>
-<ol>
-<li><blockquote>
-<p>cat &gt;&gt; ~/.vimrc &lt;&lt; eof</p>
-</blockquote>
-</li>
-<li><p>&gt;<br>au BufRead,BufNewFile *.{md,mdown,mkd,mkdn,markdown,mdwn} set filetype=mkd</p>
-</li>
-<li><blockquote>
-<p>let g:vim_markdown_folding_disabled=1</p>
-</blockquote>
-</li>
-<li><blockquote>
-<p>eof</p>
-</blockquote>
-</li>
-</ol>
-</blockquote>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/23/vim配置markdown语法高亮/" data-id="cim4i8yf000016eqvaa8vaqgu" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-centos优化" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-centos优化" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2016/03/23/centos优化/" class="article-date">
   <time datetime="2016-03-23T07:03:44.087Z" itemprop="datePublished">2016-03-23</time>
@@ -357,55 +311,28 @@ echo &quot;modprobe bridge&quot;&gt;&gt; /etc/rc.local
     </footer>
   </div>
   
-</article>
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/03/19/hello-world/" class="article-date">
-  <time datetime="2016-03-19T13:47:17.409Z" itemprop="datePublished">2016-03-19</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
+    <a href="/2016/03/23/vim配置markdown语法高亮/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
         
+          (no title)
+        
+      </div>
+    </a>
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/03/19/hello-world/">Hello World</a>
-    </h1>
   
+    <a href="/2016/03/19/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/03/19/hello-world/" data-id="cim4i8yf700026eqvuskie2ar" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
   
 </article>
-
-
-  
 
 </section>
         
